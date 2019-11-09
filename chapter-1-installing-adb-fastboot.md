@@ -16,6 +16,10 @@ fastboot 是用于对 Android 设备分区进行刷写擦除操作的工具，�
 
 通过 ``fastboot -h`` 命令便可查看大部分命令的用途。
 
+### 举个简单的例子用用？
+
+玩着玩着手机，突然想刷个 ROM 了。随后把手机连接到电脑，电脑上使用 ``adb reboot bootloader`` 重启到 Fastboot 模式。然后用 ``fastboot boot TWRP.img`` 进入 TWRP，格式化 Data，哎呀 ROM 忘记刷了，但是这里 Data 处于不可用状态了...，就打开 TWRP 的 Sideload 模式。使用 ``adb sideload ROM.zip`` 把 ROM 线刷进去。重启。完成！
+
 ### 安装 adb 与 fastboot
 
 许多用户使用 adb 与 fastboot 的方式或许是在程序所在文件夹 Shift 右键开一个 PowerShell 或命令提示符。或者是 Ctrl + R 运行 ``cmd`` 然后再使用 ``cd`` 命令切换到目标目录。
